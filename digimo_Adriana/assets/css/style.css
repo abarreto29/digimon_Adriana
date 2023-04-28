@@ -1,0 +1,31 @@
+.tarjeta {
+    margin: 2%;
+    display: inline-block;
+
+}
+
+h1, footer, h2{
+    text-align: center;
+
+}
+
+footer {
+    color:rgb(225, 245, 246);
+    font-size: medium;
+    background-color:rgb(119, 203, 36);  
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align:justify center;
+        }
+};
+
+.carousel {
+  
+}
+#imagen {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+}

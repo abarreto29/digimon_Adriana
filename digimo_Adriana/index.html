@@ -10,6 +10,7 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
     <link rel="stylesheet" href="assets/css/style.css">
     <title>DIGIMON FANS</title>
     <link rel="icon" type="image/x-icon"
+    <script src="Assets/JS/jquery-3.6.0.min.js"></script>
         href="assets/IMG/favicon.ico">
 </head>
 <body>
@@ -43,7 +44,7 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
   <div class="container-flex">
     <div id="carouselExampleControls" class="carousel slideslide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active"
+        <div class="carousel-item active">
         <img src="assets/img/img-1.jpg" class= "d-block w-100" width="620px"  height="450" alt="carousel1">
         </div>
         <div class="carousel-item">
@@ -53,44 +54,50 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
         <div class="carousel-item">
           <a href="https://digimon.fandom.com/es/wiki/Agumon"><img src="assets/img/img-3.jpg" class= "d-block w-100" width="620px"  height="450"alt="carousel3"></a>
         </div>
-      </div>
-      <button class="carousel-control-prev" ty pe="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" onclick="plusSlides(-1)">
+      <button id= "Previus" class="carousel-control-prev" ty pe="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" onclick="plusSlides(1)">
+      <div id="imagen"></div>
+      <button id="Next" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
+      <div class="controles">
+        <button id="play">Play</button>
+        <button id="stop" disabled>Stop</button>
+      </div>
+    </div>
     </div>
   </div>
  </section>
-  <main>
-    <div id="contenido">
-      <div>
-        <h1> LISTA DIGIMON</h1>
-        <div class="container">
-          <table class="table table-stripe container justify-content-center">
+ <section>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="imput-group mb-3">
+          <input type="text" class="form-control" placeholder="BUSCA TU DIGIMON" id="search-input">
+          <button class="btn btn-outline-warning" type="button" id="search-button">Search<i class="fa-solid fa-magnifying-glass"></i> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+          <table class="table table-stripe  justify-conteiner-center  table-hover container">        
             <thead>
               <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">IMAGEN</th>
-              <th scope="col">NIVEL</th>
+              <th scope="col">userId</th>
+              <th scope="col">name</th>
+              <th scope="col">img</th>
+              <th scope="col">level</th>
               </tr>
             </thead>
             <tbody id="contenido">
-              <tr v-for="item in digimon" :key="item.digi_id">
-                <td>{{ item.local_id }}</td>
-                <td>{{ item.local_nombre }}</td>
-                <td>{{ item.local_telefono }}</td>
-                <td>{{ item.comuna_nombre }}</td>
-              </tr>
-            </tbody>
           </table>
-        </div>
-      </div>
-    </main>
+</section>
+<section>
+  <div id="contenido"></div>
+</section>
+
     <!--Footer-->
     <section id="footer">
     <div class="container">
@@ -99,9 +106,9 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
       <div class="container-fluid d-lg-flex justify-content-lg-end ps-6 pt-6">
       <span class="icons fs-icon">
       <a style="color: rgb(205, 181, 44);" href = "RedesSociales.html"></i class= "fa-brands fa-github-square fs-2"></i><a/>
-      <a style="color: rgb(34, 66, 191);" href = "RedesSociales.html"> <i class="fa-brands fa-facebook"></i></a>
-      <a style="color: rgb(34, 66, 191);" href = "RedesSociales.html"><i class="fa-brands fa-twitter"></i></a>
-      <a style="color: rgb(34, 66, 191);" href = "RedesSociales.html"><i class="fa-brands fa-youtube"></i>
+      <a style="color: rgb(205, 181, 44);" href = "RedesSociales.html"> <i class="fa-brands fa-facebook"></i></a>
+      <a style="color: rgb(205, 181, 44);" href = "RedesSociales.html"><i class="fa-brands fa-twitter"></i></a>
+      <a style="color: rgb(205, 181, 44);" href = "RedesSociales.html"><i class="fa-brands fa-youtube"></i>
     </span>
       </div>
      </footer>
