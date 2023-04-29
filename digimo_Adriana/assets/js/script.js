@@ -26,6 +26,7 @@ fetch(url)
 }
 
 })
+
 .catch(error => {
   console.error(`${error.message}`);
 });
@@ -140,7 +141,7 @@ fetch(url)
         <tr>
             <th scope="row">${item.userId}</th>
             <td>${item.name}</td>
-            <td> <img src="${item.img} class="list-img-top" alt="..."</td>
+            <td> <img src="${item.img}class="list-img-top" alt="imagen" width="20px" height="20px"</td>
             <td>${item.level}</td>
         </tr>
                 
